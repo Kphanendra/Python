@@ -30,17 +30,18 @@ print("20//3 =", 20//3)    # 6, FLOOR DIVISION Operator
 
 
 # Task-6 (BODMAS)
-print("3 + 2 * 5 ** 2 :", 3 + 2 * 5 ** 2)
+print("3 + 2 * 5 ** 2 =", 3 + 2 * 5 ** 2)
+print("(3 + 2) * 5 ** 2 =", (3 + 2) * 5 ** 2)
 ''''ans is 53   BODMAS rule applicable'''
 
 # Task-7 (Assignment Operator)
 num=50
 num+=25
-print("final value =", num)
+print("Assignment 50+25 =", num)
 
 num=100
 num/=10
-print("final value =", num)
+print("Assignment 100/10 =", num)
 
 # Task-8 (Comparison Operators)
 print("10 > 5 :", 10 > 5)  #True 
@@ -56,30 +57,33 @@ a = "apple"
 b = "Apple"
 
 print("a == b :", a == b)   #False
-'''small"a", capital "A"  has different ascii values '''
+'''1. string comparisions are casesensitive
+   2. small"a", capital "A"  has different ascii values '''
 
 
 # Task-10 (Logical)
-print("10 > 5 and 5 == 5 :", 10 > 5 and 5 == 5)    #True
-print("5 > 10 or 10 == 10 :", 5 > 10 or 10 == 10)   #True
-print("not(5 > 2) :", not(5 > 2))   #False
+print("10 > 5 and 5 == 5 :", 10 > 5 and 5 == 5)    
+print("5 > 10 or 10 == 10 :", 5 > 10 or 10 == 10)   
+print("not(5 > 2) :", not(5 > 2))   
 
 
-# Task-11 (Membership)
+# Task-11 (Membership operator) 
 numbers=[10,20,30,40,50]
-print("20 in numbers=", 20 in numbers)    #True
-print("60 in numbers=", 60 in numbers)    #False
-print("30 in numbers=", 30 not in numbers)    #False
+print("20 in numbers=", 20 in numbers)    
+print("60 in numbers=", 60 in numbers)    
+print("30 not in numbers=", 30 not in numbers)    
+'''chuck the value or variabe is found true'''
 
-# Task-12 (Swap)
+# Task-12 (single line Swap)
 a=10
 b=20
 a,b=b,a
-print("a=",a)
-print("b=",b)
+print("a =",a,"&","b =",b, )
+
 
 # Task-13 (Bitwise XOR)
 a=6
 b=3
 print("a^b=", a^b)
+
 
