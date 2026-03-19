@@ -1,3 +1,5 @@
+############## Loop Basics #################
+
 # 1.Print numbers from 1 to 50 using for loop
 for i in range(1,51):
     print(i)
@@ -50,7 +52,7 @@ a = int(input("Enter No: "))
 for i in range(1, a+1):
   print(i)
 
-########### While Loop ############
+################ While Loop #################
 
 # 11.Print numbers from 1 to 20 using while
 i = 1
@@ -66,7 +68,7 @@ i = 1
 while i <= n:
     fact *= i
     i += 1
-print(fact)
+print("Factorial: ", fact)
 
 # 13.Reverse a number using while
 a = int(input("Enter number: "))
@@ -74,7 +76,7 @@ rev = 0
 while a > 0:
     rev = rev * 10 + a % 10
     a //= 10
-print(rev)
+print("Reverse number: ", rev)
 
 
 # 14.Count digits in a number
@@ -91,11 +93,12 @@ while True:
     x = input("Enter something: ")
     if x == "stop":
         break
+        
+############### Nested Loop ###################
 
 # 16.Print * pattern:
 for i in range(1,5):
     print("*" * i)
-
 
 # 17.Print Nu(1, 12, 123...) pattern:
 for i in range(1,5):
@@ -103,8 +106,6 @@ for i in range(1,5):
         print(j, end="")
     print()
         
-
-
 # 18.Print multiplication table (1 to 5) using nested loop
 for i in range(1,6):
     for j in range(1, 11):
@@ -130,6 +131,8 @@ for i in range(3):
         print(a, end=" ")
         a += 1
     print()
+
+############### String Basics ##################
 
 # 21.Count total characters in a string
 a = input("Enter : ")
@@ -172,6 +175,8 @@ if text == x:
 else:
     print("Not A Palindrome")
 
+############### String Slicing ##################
+
 # 26.Print first 5 characters of a string
 a = input("Enter : ")
 print("First 5 :", a[:5])
@@ -187,6 +192,8 @@ print("Reversed word:", a[: : -1])
 # 29.Print every 2nd character
 a = input("Enter : ")
 print("2nd character :", a[::2])
+
+################# List Basics ##################
 
 # 30.Remove first and last character from string
 a = input("Enter : ")
@@ -213,32 +220,40 @@ print("total elements : ", len(a))
 # 35.Check if element exists in list
 a = [5, 8, 3, 7, 1]
 x = int(input("Enter : "))
-print(x in a)
+print("Element Exist: ", x in a)
 
+############# List Operations ##############
 
 # 36.Add 3 elements using append()
 a = [10,20]
-a.append(30)
-a.append(40)
-a.append(50)
-print(a)
+b = [30, 40, 50]
+for item in b:
+    a.append(item)
+print("Append: ", a)
 
 # 37.Insert element at specific index
 a = [5, 10, 20, 25]
 a.insert(2,15)
-print(a)
+print("Insert Element: ", a)
 
 # 38.Remove element using remove()
-a = [5, 10, 20, 25]
+a = [10, 15, 20, 25]
 a.remove(20)
-print(a)
+print("Remove Eliment : ", a)
 
 # 39.Reverse list without using .reverse()
 a = [5, 10, 15, 20, 25]
-revese = a[::-1]
-print(revese)
+rev = []
+i = len(a) - 1
+while i >= 0:
+    rev.append(a[i])
+    i -= 1
+print("Reverse list : ", rev)
 
 # 40.Sort list without using .sort()
-a = [9,3,8,2,5,7,1]
-a.sort()
-print(a)
+a = [9,3,8,2,5,7,1,4]
+for i in range(len(a)):
+    for j in range(i+1, len(a)):
+        if a[i] > a[j]:
+            a[i], a[j] = a[j], a[i]
+print("Sort list : ", a)
